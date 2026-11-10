@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Tracker</title>
+<link rel="stylesheet" href="style.css?v=13">
+</head>
+<body>
+<div id="netBar" class="net-bar" role="status" aria-live="polite"></div>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>Tracker</h1>
+      <p id="todayLine" class="date"></p>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-label">Today</div>
+    <div id="todayTotal" class="hero-total">0:00:00</div>
+    <div id="weekTotal" class="hero-sub"></div>
+  </section>
+
+  <form id="addForm" class="add-form" autocomplete="off">
+    <input id="newName" type="text" placeholder="New category" maxlength="60" enterkeyhint="done">
+    <div class="colors" id="colorPick" role="radiogroup" aria-label="Shade for new category">
+      <button type="button" data-c="#f5f5f7" style="background:#f5f5f7" aria-label="white"></button>
+      <button type="button" data-c="#d1d1d6" style="background:#d1d1d6" aria-label="light grey"></button>
+      <button type="button" data-c="#a1a1a6" style="background:#a1a1a6" aria-label="grey"></button>
+      <button type="button" data-c="#8e8e93" style="background:#8e8e93" aria-label="mid grey"></button>
+      <button type="button" data-c="#6e6e73" style="background:#6e6e73" aria-label="dark grey"></button>
+      <button type="button" data-c="#48484a" style="background:#48484a" aria-label="charcoal"></button>
+    </div>
+    <button type="submit" class="btn primary">Add</button>
+  </form>
+
+  <div id="list" class="list"></div>
+  <div id="empty" class="empty" hidden>
+    <p><strong>No categories yet.</strong></p>
+    <p>Create one above, then press Start. Only one timer runs at a time — starting another pauses the rest.</p>
+  </div>
+
+  <section class="stats">
+    <div class="stats-head">
+      <h2>Progress</h2>
+      <div class="range" id="rangePick" role="group" aria-label="Range">
+        <button type="button" data-days="7" class="sel">7d</button>
+        <button type="button" data-days="14">14d</button>
+        <button type="button" data-days="30">30d</button>
+      </div>
+    </div>
+    <div id="statsList"></div>
+    <h3 class="hist-title">Daily history</h3>
+    <div id="historyList"></div>
+  </section>
+
+  <p class="hint"><b>Start</b> runs the timer and pauses the others. <b>Pause</b> freezes it. <b>Save</b> adds the session to today and resets it. <b>Reset</b> discards the unsaved session. Time is stored on the server, so a refresh or phone lock never loses progress.</p>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="app.js?v=13"></script>
+</body>
+</html>

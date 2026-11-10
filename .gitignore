@@ -1,0 +1,10 @@
+node_modules/
+tracker.db
+tracker.db-shm
+tracker.db-wal
+server.log
+server.pid
+*.sqlite
+*.db
+.DS_Store
+.env

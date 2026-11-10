@@ -1,0 +1,14 @@
+{
+  "name": "tracker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Personal time tracker — categories, one active timer, SQLite persistence",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test-smoke.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
