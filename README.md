@@ -1,8 +1,15 @@
 # time-tracker
 
+![time-tracker on desktop](docs/images/screenshot.png)
+
 Personal time tracker — responsive web app, unlimited categories, one active timer, SQLite persistence, daily progress.
 
 Zero dependencies: Node ≥ 22 only (`node:http` + `node:sqlite`). No build step, no `npm install`.
+
+<p align="center">
+  <img src="docs/images/screenshot-mobile.png" alt="time-tracker on mobile" width="320">
+</p>
+<p align="center"><sub>Mobile — the header total follows the timer currently in progress.</sub></p>
 
 ## Run
 
